@@ -16,17 +16,17 @@ export function Navigation({ brandName = "ThePaulin" }: NavigationProps) {
         </Link>
 
         <div className="flex gap-8 items-center">
-          <Link to="/" className="text-primary hover:text-secondary transition-colors">
+          <Link to="/" className="text-primary hover:text-primary-dark transition-colors">
             Home
           </Link>
-          <Link to="/blog" className="text-primary hover:text-secondary transition-colors">
+          <Link to="/blog" className="text-primary hover:text-primary-dark transition-colors">
             Blog
           </Link>
           <a
             href="https://bixlers.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-secondary transition-colors"
+            className="text-primary hover:text-primary-dark transition-colors"
           >
             Partnership
           </a>
@@ -67,14 +67,14 @@ export function Navigation({ brandName = "ThePaulin" }: NavigationProps) {
           <div className="px-4 py-4 space-y-4">
             <Link
               to="/"
-              className="block text-primary hover:text-secondary transition-colors"
+              className="block text-primary hover:text-primary-dark transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/blog"
-              className="block text-primary hover:text-secondary transition-colors"
+              className="block text-primary hover:text-primary-dark transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Blog
@@ -83,7 +83,7 @@ export function Navigation({ brandName = "ThePaulin" }: NavigationProps) {
               href="https://bixlers.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-primary hover:text-secondary transition-colors"
+              className="block text-primary hover:text-primary-dark transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Partnership

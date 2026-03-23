@@ -64,7 +64,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                     />
                   )}
                   <p className="text-sm text-gray-400 mb-2">{post.date}</p>
-                    <h3 className="font-semibold text-lg mb-2 group-hover:text-secondary transition-colors">
+                    <h3 className="font-semibold text-lg mb-2 group-hover:text-primary-dark transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-gray-400 text-sm">{post.excerpt}</p>

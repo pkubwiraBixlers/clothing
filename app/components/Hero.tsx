@@ -43,7 +43,7 @@ export function Hero() {
       <div className="absolute bottom-[10%] left-0 right-0 flex justify-center">
         <Link
           to="/blog"
-          className="bg-secondary text-primary px-8 py-3 font-medium hover:bg-secondary-dark transition-colors"
+          className="bg-white text-primary px-8 py-3 font-medium hover:bg-gray-100 transition-colors"
         >
           Shop Now
         </Link>
