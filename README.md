@@ -1,24 +1,30 @@
-# Welcome to React Router!
+# ThePaulin Blog
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A modern fashion blog for ThePaulin, built with React Router v7 and Tailwind CSS.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Tech Stack
+
+- **Framework:** React Router v7
+- **Styling:** Tailwind CSS v4
+- **Language:** TypeScript
+- **Content:** Markdown with gray-matter and marked
+- **Deployment:** Docker
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- Responsive blog with parallax hero section
+- Markdown-based blog posts
+- Blue and amber color scheme
+- Mobile-friendly navigation
 
 ## Getting Started
 
-### Installation
+### Prerequisites
 
-Install the dependencies:
+- Node.js 18+ 
+- npm or pnpm
+
+### Installation
 
 ```bash
 npm install
@@ -26,62 +32,76 @@ npm install
 
 ### Development
 
-Start the development server with HMR:
+Start the development server with hot module replacement:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+The application will be available at `http://localhost:5173`.
 
-## Building for Production
+### Type Checking
 
-Create a production build:
+```bash
+npm run typecheck
+```
+
+### Building for Production
 
 ```bash
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
+### Production Server
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+npm start
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+## Project Structure
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+app/
+├── components/       # React components (Navigation, Hero)
+├── data/            # Static data (hero product info)
+├── lib/             # Utilities (post loading)
+├── posts/           # Blog posts in Markdown
+├── routes/          # Route components (home, blog)
+└── app.css         # Tailwind theme configuration
 ```
 
-## Styling
+## Adding Blog Posts
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Create a new `.md` file in `app/posts/` with frontmatter:
+
+```markdown
+---
+title: "Your Post Title"
+date: "2026-01-15"
+excerpt: "A brief description of your post"
+coverImage: "/path/to/image.jpg"
+---
+
+Your content here...
+```
+
+## Docker Deployment
+
+Build and run with Docker:
+
+```bash
+docker build -t thepaulin-blog .
+docker run -p 3000:3000 thepaulin-blog
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ---
 
-Built with ❤️ using React Router.
+Built with React Router v7.
